@@ -1,0 +1,347 @@
+
+/* ===== General Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    color: #334155;
+    background-color: #f8fafc;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* ===== Navigation ===== */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #334155;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    color: #2563eb;
+}
+
+/* ===== Dark Mode Button ===== */
+#dark-mode-btn {
+    padding: 9px 13px;
+    border: none;
+    border-radius: 7px;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+#dark-mode-btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    text-align: center;
+    padding: 100px 24px;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+}
+
+.eyebrow {
+    color: #2563eb;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.2;
+    color: #1e40af;
+    margin-bottom: 20px;
+}
+
+.hero > p:not(.eyebrow) {
+    max-width: 650px;
+    margin: 0 auto 25px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 11px 23px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 12px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* ===== Common Sections ===== */
+.section {
+    max-width: 1050px;
+    margin: auto;
+    padding: 70px 24px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #1e40af;
+    margin-bottom: 22px;
+}
+
+.section-description {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ===== Skills ===== */
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.skills-list span {
+    background-color: #dbeafe;
+    color: #1e40af;
+    padding: 9px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* ===== Projects ===== */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    text-align: left;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #ffffff;
+    padding: 26px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h3 {
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    margin-bottom: 18px;
+}
+
+.project-link {
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: auto;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== Contact ===== */
+.contact-section {
+    background-color: #eff6ff;
+    border-radius: 14px;
+    margin-bottom: 60px;
+}
+
+/* ===== Footer ===== */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    padding: 24px;
+    background-color: #1e293b;
+    color: #ffffff;
+    text-align: center;
+}
+
+footer a {
+    color: #bfdbfe;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Dark Mode ===== */
+body.dark-mode {
+    color: #e2e8f0;
+    background-color: #0f172a;
+}
+
+.dark-mode header,
+.dark-mode .project-card {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+
+.dark-mode .nav-links a {
+    color: #e2e8f0;
+}
+
+.dark-mode .nav-links a:hover {
+    color: #93c5fd;
+}
+
+.dark-mode .hero {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+}
+
+.dark-mode .hero h1,
+.dark-mode .section h2 {
+    color: #93c5fd;
+}
+
+.dark-mode .eyebrow,
+.dark-mode .project-card h3,
+.dark-mode .project-link {
+    color: #93c5fd;
+}
+
+.dark-mode .skills-list span {
+    background-color: #1e3a5f;
+    color: #bfdbfe;
+}
+
+.dark-mode .contact-section {
+    background-color: #1e293b;
+}
+
+/* ===== Keyboard Accessibility ===== */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #60a5fa;
+    outline-offset: 3px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 800px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 10px 16px;
+    }
+
+    .hero {
+        padding: 75px 20px;
+    }
+
+    .section {
+        padding: 50px 20px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-section {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
